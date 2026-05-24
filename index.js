@@ -256,14 +256,20 @@ async function startNazeBot() {
 	naze.ev.on('connection.update', async (update) => {
 		const { qr, connection, lastDisconnect, isNewLogin, receivedPendingNotifications } = update;
 		if ((connection === 'connecting' || !!qr) && pairingCode && phoneNumber && !naze.authState.creds.registered && !pairingStarted) {
+			pairingStarted = true;
 			setTimeout(async () => {
-				pairingStarted = true;
-				console.log('Requesting Pairing Code...')
-				let code = await naze.requestPairingCode(phoneNumber);
-				console.log(chalk.blue('Your Pairing Code :'), chalk.green(code), '\n', chalk.yellow('Expires in 15 second'));
+				try {
+					console.log('Requesting Pairing Code...')
+					let code = await naze.requestPairingCode(phoneNumber);
+					console.log(chalk.blue('Your Pairing Code :'), chalk.green(code), '\n', chalk.yellow('Expires in 15 second'));
+				} catch (err) {
+					console.log(chalk.redBright('[ERROR] Failed to retrieve the Pairing Code:'), err.message);
+					pairingStarted = false;
+				}
 			}, 3000)
 		}
 		if (connection === 'close') {
+			pairingStarted = false;
 			const reason = new Boom(lastDisconnect?.error)?.output.statusCode
 			if (reason === DisconnectReason.connectionLost) {
 				console.log('Connection to Server Lost, Attempting to Reconnect...');
