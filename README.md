@@ -1,16 +1,16 @@
 ## Information
 
 <div align="center">
-<a href="https://github.com/nazedev/hitori/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/nazedev/hitori?label=Watchers&color=green&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/network/members"><img title="Forks" src="https://img.shields.io/github/forks/nazedev/hitori?label=Forks&color=blue&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/nazedev/hitori?label=Stars&color=yellow&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/issues"><img title="Issues" src="https://img.shields.io/github/issues/nazedev/hitori?label=Issues&color=success&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/nazedev/hitori?label=Issues&color=red&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/nazedev/hitori?label=PullRequest&color=success&style=flat-square"></a>
-<a href="https://github.com/nazedev/hitori/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/nazedev/hitori?label=PullRequest&color=red&style=flat-square"></a>
+<a href="https://github.com/dark-end5/hitori/watchers"><img title="VIEWS" src="https://img.shields.io/github/watchers/dark-end5/hitori?label=Watchers&color=green&style=flat-square"></a>
+<a href="https://github.com/dark-end5/hitori/network/members"><img title="Forks" src="https://img.shields.io/github/forks/dark-end5/hitori?label=Forks&color=blue&style=round-square"></a>
+<a href="https://github.com/dark-end5/hitori/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/nazedev/hitori?label=Stars&color=yellow&style=flat-star"></a>
+<a href="https://github.com/dark-end5/hitori/issues"><img title="Issues" src="https://img.shields.io/github/issues/dark-end5/hitori?label=Issues&color=success&style=flat-circle"></a>
+<a href="https://github.com/dark-end5/hitori/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/dark-end5/hitori?label=Issues&color=red&style=flat-square"></a>
+<a href="https://github.com/dark-end5/hitori/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/dark-end5/hitori?label=PullRequest&color=success&style=flat-square"></a>
+<a href="https://github.com/dark-end5/hitori/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/dark-end5/hitori?label=PullRequest&color=red&style=flat-triangle"></a>
 </div>
 
-This script is created by [Nazedev](https://github.com/nazedev) using Node.js and the [WhiskeySocket/Baileys](https://github.com/WhiskeySockets/Baileys) library. The script is currently in the development phase (BETA), so there may still be some errors that can be ignored. If errors persist even after debugging, please contact the owner for assistance. ~ By Naze
+This script is created by [Nazedev](https://github.com/dark-end5) using Node.js and the [WhiskeySocket/Baileys](https://github.com/WhiskeySockets/Baileys) library. The script is currently in the development phase (BETA), so there may still be some errors that can be ignored. If errors persist even after debugging, please contact the owner for assistance. ~ By Naze
 
 #### Join Group
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EApQZ65s9wF1UG5nD6Pinm?mode=gi_t) 
@@ -55,7 +55,7 @@ pkg install git
 pkg install nodejs
 pkg install ffmpeg
 pkg install imagemagick
-git clone https://github.com/nazedev/hitori
+git clone https://github.com/dark-end5/hitori
 cd hitori
 npm install
 ```
