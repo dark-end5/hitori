@@ -15,18 +15,18 @@ const __filename = fileURLToPath(import.meta.url);
 
 global.owner = ["254706519089"] // ['628','628'] 2 owner atau lebih
 global.author = 'BaileysBot'
-global.botname = 'Hitori Bot'
+global.botname = 'Lesta Bot'
 global.packname = 'Bot WhatsApp'
 global.timezone = 'Africa/Nairobi' // East Africa Time (EAT) - Changed from Asia/Jakarta
 global.locale = 'en' // Ganti pakai command .setlocale
 global.listprefix = ["+","!","."]
 global.defaultAdminKey = crypto.randomBytes(5).toString("hex");
 
-global.listv = ['•','●','■','✿','▲','➩','➢','➣','➤','✦','✧','△','❀','○','□','♤','♡','◇','♧','々','〆']
+global.listv = ['➩','➢','➣','➤','✦']
 global.tempatDB = 'database.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
 global.tempatStore = 'baileys_store.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
 global.pairing_code = true
-global.number_bot = '' // Kalo pake panel bisa masukin nomer di sini, jika belum ambil session. Format : '628xx'
+global.number_bot = '254706519089' // Kalo pake panel bisa masukin nomer di sini, jika belum ambil session. Format : '628xx'
 
 global.fake = {
 	anonim: 'https://telegra.ph/file/95670d63378f7f4210f03.png',
@@ -38,39 +38,39 @@ global.fake = {
 
 global.my = {
 	yt: "https://youtube.com/c/Nazedev",
-	gh: "https://github.com/nazedev",
+	gh: "https://github.com/dark-end5",
 	gc: "https://chat.whatsapp.com/EqMTCcxdCZgHUJNl5KooCr",
 	ch: "120363250409960161@newsletter"
 }
 
 global.limit = {
 	free: 20,
-	premium: 999,
-	vip: 900
+	premium: 9999999,
+	vip: 9099999990
 }
 
 global.money = {
-	free: 10000,
-	premium: 1000000,
-	vip: 10000000
+	free: 10000000,
+	premium: 10000000000,
+	vip: 100000000000
 }
 
 global.mess = {
 	key: "Apikey limit! Silahkan Upgrade: https://naze.biz.id",
-	owner: "Khusus Owner!",
-	admin: "Khusus Admin!",
-	botAdmin: "Bot harus Admin!",
+	owner: "*For Owner* !",
+	admin: "*For Admin* !",
+	botAdmin: "Bot Must be Admin!",
 	onWa: "Nomor tersebut tidak terdaftar di WhatsApp!",
-	group: "Khusus Grup!",
-	private: "Khusus Private Chat!",
+	group: "For Grup!",
+	private: "For Private Chat!",
 	quoted: "Reply pesannya!",
 	limit: "Limit habis!",
 	prem: "Khusus Premium!",
 	text: "Masukkan teksnya!",
 	media: "Kirim medianya!",
 	wait: "*Processing* 🔄🔄▪️▪️▪️...",
-	fail: "Gagal!",
-	error: "Error!",
+	fail: "Failed to load❌!",
+	error: "Error❗❗🔕!",
 	done: "*Done* 👍 ✅"
 }
 
