@@ -17,7 +17,7 @@ global.owner = ["254706519089"] // ['628','628'] 2 owner atau lebih
 global.author = 'BaileysBot'
 global.botname = 'Hitori Bot'
 global.packname = 'Bot WhatsApp'
-global.timezone = 'Asia/Jakarta' // Ganti pakai command .settimezone
+global.timezone = 'Africa/Nairobi' // East Africa Time (EAT) - Changed from Asia/Jakarta
 global.locale = 'en' // Ganti pakai command .setlocale
 global.listprefix = ["+","!","."]
 global.defaultAdminKey = crypto.randomBytes(5).toString("hex");
@@ -33,7 +33,7 @@ global.fake = {
 	thumbnailUrl: 'https://telegra.ph/file/fe4843a1261fc414542c4.jpg',
 	thumbnail: fs.readFileSync('./src/media/naze.png'),
 	docs: fs.readFileSync('./src/media/fake.pdf'),
-	listfakedocs: ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','application/vnd.openxmlformats-officedocument.presentationml.presentation','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/pdf'],
+	listfakedocs: ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','application/vnd.openxmlformats-officedocument.presentationml.presentation','application/vnd.openxmlformats-officedocument.wordprocessingml.document']
 }
 
 global.my = {
@@ -68,10 +68,10 @@ global.mess = {
 	prem: "Khusus Premium!",
 	text: "Masukkan teksnya!",
 	media: "Kirim medianya!",
-	wait: "Proses...",
+	wait: "*Processing* 🔄🔄▪️▪️▪️...",
 	fail: "Gagal!",
 	error: "Error!",
-	done: "Selesai!"
+	done: "*Done* 👍 ✅"
 }
 
 global.APIs = {
@@ -92,8 +92,16 @@ global.jadwalSholat = {
 	Isya: '19:00'
 }
 
-global.badWords = ["dongo","konsol"] // input kata-kata toxic yg lain. ex: ['dongo','dongonya']
+global.badWords = [""] // input kata-kata toxic yg lain. ex: ['dongo','dongonya']
 global.chatLength = 1000
+
+// Template message types
+global.templateTypes = {
+	1: 'Button Message',
+	2: 'List Message',
+	3: 'Document Message',
+	4: 'Video Message'
+}
 
 fs.watchFile(__filename, async () => {
 	console.log(chalk.yellowBright(`[UPDATE] ${__filename}`))
