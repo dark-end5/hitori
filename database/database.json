@@ -45,12 +45,12 @@
   "store": {},
   "users": {
     "254706519089@s.whatsapp.net": {
-      "vip": false,
+      "vip": true,
       "ban": false,
       "afkTime": -1,
       "afkReason": "",
       "register": false,
-      "limit": 20,
+      "limit": 999,
       "money": 10000000,
       "lastclaim": 1782466556364,
       "lastbegal": 1782466556364,
