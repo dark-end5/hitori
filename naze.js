@@ -4306,8 +4306,8 @@ Select Bot Settings:
                                         if (!isCreator) return m.reply(mess.owner)
                                         if (['1','2','3'].includes(args[1])) {
                                                 set.template = parseInt(Number(args[1]))
-                                                m.reply('Sukses Mengubah Template Menu')
-                                        } else m.reply(`Template Menu:\n- 1 (Button Menu)\n- 2 (List Menu)\n- 3 (Document Menu)\n\nExample: ${prefix + command} set 1`)
+                                                m.reply('Menu template updated successfully!')
+                                        } else m.reply(`Menu Templates:\n- 1 (Button Menu)\n- 2 (List Menu)\n- 3 (Document Menu)\n\nExample: ${prefix + command} set 1`)
                                 } else await templateMenu(naze, set.template, m, prefix, setv, db, { locale_day, date, date_time, botNumber, author, packname, isVip, isPremium, ucapanWaktu })
                         }
                         break

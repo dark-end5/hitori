@@ -1,13 +1,14 @@
 {
   "hit": {
-    "totalcmd": 14,
-    "todaycmd": 14,
+    "totalcmd": 15,
+    "todaycmd": 15,
     "bot": 3,
     "ping": 2,
     "allmenu": 2,
     "info": 2,
     "gc": 4,
-    "profile": 1
+    "profile": 1,
+    "menu": 1
   },
   "set": {
     "254706519089@s.whatsapp.net": {
