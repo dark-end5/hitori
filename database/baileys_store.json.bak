@@ -2,8 +2,7 @@
   "contacts": {
     "254706519089@s.whatsapp.net": {
       "id": "116119323078873@lid",
-      "phoneNumber": "254706519089@s.whatsapp.net",
-      "name": "Eliud"
+      "phoneNumber": "254706519089@s.whatsapp.net"
     },
     "263713178283@s.whatsapp.net": {
       "id": "9458021363866@lid",
@@ -509,6 +508,69 @@
               "messageSecret": "ZyCBarmU8QHahby83lE09Fg+RmpU9VsYPwrVDDhjU1c="
             }
           }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC4D7D36E310D90DBE602116AF9BCFD8",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466747,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".info",
+            "messageContextInfo": {
+              "messageSecret": "2OWHNlKwQhpV/0VvHS4pBb5LG/pdReyOa1RfeNaOwtU="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACA15CFFD5994C0DAE3E0A837A229C9F",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466752,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc",
+            "messageContextInfo": {
+              "messageSecret": "E8aZ7a1YphF1NFT2AHz8D1/YpIZThJ/0YL07lXwYQQI="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0AC3169B60BAE7E5B41"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🔴\n- leave on/off 🔴\n- promote on/off 🔴\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "ACA15CFFD5994C0DAE3E0A837A229C9F",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "Hs2o9SGoJx/PBxbidfC8vCTvrJ0nvjgUXruz00f2fdc="
+            }
+          },
+          "messageTimestamp": "1782466752",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
         }
       ],
       "keyId": {}
