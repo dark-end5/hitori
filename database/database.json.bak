@@ -1,14 +1,14 @@
 {
   "hit": {
-    "totalcmd": 15,
-    "todaycmd": 15,
+    "totalcmd": 19,
+    "todaycmd": 19,
     "bot": 3,
     "ping": 2,
-    "allmenu": 2,
+    "allmenu": 3,
     "info": 2,
     "gc": 4,
     "profile": 1,
-    "menu": 1
+    "menu": 4
   },
   "set": {
     "254706519089@s.whatsapp.net": {
@@ -36,7 +36,7 @@
       "autobackup": false,
       "botname": "Lesta Bot",
       "packname": "Bot WhatsApp",
-      "template": "documentMessage",
+      "template": 1,
       "owner": [
         "254706519089"
       ],
