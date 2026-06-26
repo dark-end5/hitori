@@ -123,6 +123,65 @@
   .sys-row .key { color: #666; }
   .sys-row .val { color: #ccc; font-weight: 500; }
 
+  /* Settings form */
+  .settings-panel {
+    background: #111b14;
+    border: 1px solid #25d36640;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .settings-panel h3 {
+    font-size: 0.9rem; color: #25d366; margin-bottom: 20px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field label { font-size: 0.78rem; color: #888; text-transform: uppercase; letter-spacing: 0.4px; }
+  .field input {
+    background: #0d1710;
+    border: 1px solid #1f3024;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+  }
+  .field input:focus { border-color: #25d366; }
+  .field .hint { font-size: 0.72rem; color: #444; }
+  .save-btn {
+    margin-top: 20px;
+    background: #25d366;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .save-btn:hover { background: #1ebe59; }
+  .save-btn:active { transform: scale(0.97); }
+  .save-btn:disabled { background: #1f3024; color: #444; cursor: not-allowed; }
+  .toast {
+    position: fixed; bottom: 80px; right: 24px;
+    background: #1a3d22; border: 1px solid #25d366;
+    color: #25d366; padding: 10px 20px;
+    border-radius: 8px; font-size: 0.85rem;
+    opacity: 0; transition: opacity 0.3s;
+    pointer-events: none; z-index: 100;
+  }
+  .toast.show { opacity: 1; }
+  .toast.error { background: #3d1f1f; border-color: #ef5350; color: #ef5350; }
+
   .refresh-btn {
     position: fixed; bottom: 24px; right: 24px;
     background: #25d366; color: #000; border: none;
@@ -197,6 +256,29 @@
     </div>
   </div>
 
+  <!-- Bot Configuration Panel -->
+  <div class="settings-panel">
+    <h3>⚙️ Bot Configuration</h3>
+    <div class="settings-grid">
+      <div class="field">
+        <label>Bot Name</label>
+        <input id="cfg-botname" type="text" placeholder="e.g. Lesta Bot" />
+        <span class="hint">Displayed in menus and greetings</span>
+      </div>
+      <div class="field">
+        <label>Owner Number</label>
+        <input id="cfg-owner" type="text" placeholder="e.g. 254706519089" />
+        <span class="hint">International format, no + sign. Separate multiple with commas.</span>
+      </div>
+      <div class="field">
+        <label>Command Prefix</label>
+        <input id="cfg-prefix" type="text" placeholder="e.g. . or ! or /" />
+        <span class="hint">Single character(s). Separate multiple with commas.</span>
+      </div>
+    </div>
+    <button class="save-btn" id="save-btn" onclick="saveSettings()">Save Changes</button>
+  </div>
+
   <div class="grid2">
     <div class="panel">
       <h3>Bot Settings</h3>
@@ -228,9 +310,60 @@
 
 </div>
 
+<div class="toast" id="toast"></div>
 <button class="refresh-btn" onclick="load()" title="Refresh">↻</button>
 
 <script>
+let currentSettings = {};
+
+function showToast(msg, isError = false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (isError ? ' error' : '');
+  setTimeout(() => t.className = 'toast', 3000);
+}
+
+async function loadSettings() {
+  try {
+    const s = await fetch('/api/settings').then(r => r.json());
+    currentSettings = s;
+    document.getElementById('cfg-botname').value = s.botname || '';
+    document.getElementById('cfg-owner').value = Array.isArray(s.owner) ? s.owner.join(', ') : (s.owner || '');
+    document.getElementById('cfg-prefix').value = Array.isArray(s.prefix) ? s.prefix.join(', ') : (s.prefix || '.');
+  } catch(e) {
+    console.error('Failed to load settings', e);
+  }
+}
+
+async function saveSettings() {
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+  try {
+    const body = {
+      botname: document.getElementById('cfg-botname').value.trim(),
+      owner: document.getElementById('cfg-owner').value,
+      prefix: document.getElementById('cfg-prefix').value,
+    };
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (data.success) {
+      currentSettings = data.settings;
+      showToast('Settings saved! Restart the bot for changes to take effect.');
+    } else {
+      showToast('Error: ' + data.error, true);
+    }
+  } catch(e) {
+    showToast('Failed to save: ' + e.message, true);
+  }
+  btn.disabled = false;
+  btn.textContent = 'Save Changes';
+}
+
 async function load() {
   const btn = document.querySelector('.refresh-btn');
   btn.classList.add('spinning');
@@ -243,7 +376,10 @@ async function load() {
     document.getElementById('bot-title').textContent = stats.botname;
     document.getElementById('botname').textContent = stats.botname;
     document.getElementById('botnumber').textContent = stats.number ? '+' + stats.number : 'Not set';
-    document.getElementById('owner').textContent = stats.owner ? '+' + stats.owner : '—';
+    const ownerDisplay = Array.isArray(stats.owner)
+      ? stats.owner.map(o => '+' + o).join(', ')
+      : (stats.owner ? '+' + stats.owner : '—');
+    document.getElementById('owner').textContent = ownerDisplay;
     document.getElementById('uptime').textContent = stats.uptime;
     document.getElementById('totalcmd').textContent = stats.totalcmd.toLocaleString();
     document.getElementById('todaycmd').textContent = stats.todaycmd.toLocaleString();
@@ -304,6 +440,7 @@ async function load() {
   btn.classList.remove('spinning');
 }
 
+loadSettings();
 load();
 setInterval(load, 15000);
 </script>
