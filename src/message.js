@@ -54,19 +54,19 @@ async function GroupUpdate(naze, m, store) {
 		const normalizedTarget = clearParse(m.messageStubParameters[0]);
 		const type = m.messageStubType;
 		const messages = {
-			1: 'mereset link grup!',
-			21: `mengubah Subject Grup menjadi :\n*${normalizedTarget}*`,
-			22: 'telah mengubah icon grup.',
-			23: 'mereset link grup!',
-			24: `mengubah deskripsi grup.\n\n${normalizedTarget}`,
-			25: `telah mengatur agar *${normalizedTarget == 'on' ? 'hanya admin' : 'semua peserta'}* yang dapat mengedit info grup.`,
-			26: `telah *${normalizedTarget == 'on' ? 'menutup' : 'membuka'}* grup!\nSekarang ${normalizedTarget == 'on' ? 'hanya admin yang' : 'semua peserta'} dapat mengirim pesan.`,
-			29: `telah menjadikan @${normalizedTarget?.id?.split('@')?.[0]} sebagai admin.`,
-			30: `telah memberhentikan @${normalizedTarget?.id?.split('@')?.[0]} dari admin.`,
-			72: `mengubah durasi pesan sementara menjadi *@${normalizedTarget}*`,
-			123: 'menonaktifkan pesan sementara.',
-			132: 'mereset link grup!',
-			172: `@${normalizedTarget?.pn?.split('@')?.[0]} meminta bergabung`,
+			1: 'reset the group link!',
+			21: `changed the Group Subject to:\n*${normalizedTarget}*`,
+			22: 'changed the group icon.',
+			23: 'reset the group link!',
+			24: `changed the group description.\n\n${normalizedTarget}`,
+			25: `set it so *${normalizedTarget == 'on' ? 'only admins' : 'all members'}* can edit the group info.`,
+			26: `has *${normalizedTarget == 'on' ? 'closed' : 'opened'}* grup!\nSekarang ${normalizedTarget == 'on' ? 'only admins' : 'all members'} can send messages.`,
+			29: `made @${normalizedTarget?.id?.split('@')?.[0]} an admin.`,
+			30: `removed @${normalizedTarget?.id?.split('@')?.[0]} from admin.`,
+			72: `changed the temporary message duration to *@${normalizedTarget}*`,
+			123: 'disabled temporary messages.',
+			132: 'reset the group link!',
+			172: `@${normalizedTarget?.pn?.split('@')?.[0]} requested to join`,
 		}
 		if (naze.public && global.db?.groups?.[m.chat]?.setinfo && messages[type]) {
 			await naze.sendMessage(m.chat, { text: `${admin} ${messages[type]}`, mentions: [m.sender, ...((normalizedTarget?.id || normalizedTarget)?.includes('@') ? [`${normalizedTarget.id || normalizedTarget}`] : [])].filter(Boolean)}, { ephemeralExpiration: m.expiration || m?.metadata?.ephemeralDuration || store?.messages[m.chat]?.array?.slice(-1)[0]?.metadata?.ephemeralDuration || 0 })
@@ -201,7 +201,7 @@ async function LoadDataBase(naze, m) {
 		if (!m.sender.endsWith('@g.us')) global.db.users[m.sender] = user;
 		
 		const defaultSetBot = {
-			lang: 'id',
+			lang: 'en',
 			limit: 0,
 			money: 0,
 			status: 0,

@@ -1,10 +1,10 @@
 {
   "hit": {
-    "totalcmd": 5,
-    "todaycmd": 5,
-    "bot": 1,
-    "ping": 1,
-    "allmenu": 1,
+    "totalcmd": 9,
+    "todaycmd": 9,
+    "bot": 3,
+    "ping": 2,
+    "allmenu": 2,
     "info": 1,
     "gc": 1
   },
@@ -15,7 +15,7 @@
       "money": 0,
       "status": 0,
       "log": true,
-      "join": false,
+      "join": true,
       "public": true,
       "anticall": false,
       "original": true,
@@ -23,7 +23,7 @@
       "autobio": false,
       "autoread": false,
       "antispam": false,
-      "autotyping": false,
+      "autotyping": true,
       "grouponly": true,
       "multiprefix": false,
       "privateonly": true,

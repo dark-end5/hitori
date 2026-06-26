@@ -2,7 +2,8 @@
   "contacts": {
     "254706519089@s.whatsapp.net": {
       "id": "116119323078873@lid",
-      "phoneNumber": "254706519089@s.whatsapp.net"
+      "phoneNumber": "254706519089@s.whatsapp.net",
+      "name": "Eliud"
     },
     "263713178283@s.whatsapp.net": {
       "id": "9458021363866@lid",
@@ -10,7 +11,13 @@
       "name": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷"
     }
   },
-  "presences": {},
+  "presences": {
+    "120363423926876493@g.us": {
+      "9458021363866@lid": {
+        "lastKnownPresence": "available"
+      }
+    }
+  },
   "messages": {
     "254706519089@s.whatsapp.net": {
       "array": [
@@ -571,6 +578,377 @@
           "messageTimestamp": "1782466752",
           "status": "PENDING",
           "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "AC4FC64DB0A135825AA15816807C60CD",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466969,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "conversation": ".ping",
+            "senderKeyDistributionMessage": {
+              "groupId": "120363423926876493@g.us",
+              "axolotlSenderKeyDistributionMessage": "Mwj60pMsEAAaIKI+FFsmEk7m2ZmTW01rle7+o9vUBiJGA/cBMQudeed6IiEF66rov+41/5SikopKbcsEbBb2qe8HjrLSttX8K7F8EDY="
+            },
+            "messageContextInfo": {
+              "messageSecret": "Mbq3KB6gUN2u9m0j44i+3HibaYBIIsyBZmj2P9CRgG0="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB04872795E2ACC5AD89B",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466970,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": false,
+                "id": "AC4FC64DB0A135825AA15816807C60CD",
+                "participant": "9458021363866@lid"
+              },
+              "text": "⚡",
+              "senderTimestampMs": "1782466970270"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0E57A5BCF7A622B3FCA"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Kecepatan Respon 0.0011 _Second_ \n 0.0002519999979995191 _miliseconds_\n\nRuntime : 1 minute, 36 seconds\n\n💻 Info Server\nRAM: 3.91 GB / 7.78 GB\n\n_NodeJS Memory Usaage_\nrss         : 150.53 MB\nheapTotal   : 61.76 MB\nheapUsed    : 60.27 MB\nexternal    : 22.78 MB\narrayBuffers: 18.04 MB\n\n_Total CPU Usage_\nINTEL(R) XEON(R) PLATINUM 8581C CPU @ 2.30GHz (0 MHZ)\n- *user* : 4.02%\n- *nice* : 0.00%\n- *sys*  : 3.24%\n- *idle* : 92.74%\n- *irq*  : 0.00%\n_CPU Core(s) Usage (2 Core CPU)_\n1. INTEL(R) XEON(R) PLATINUM 8581C CPU @ 2.30GHz (0 MHZ)\n- *user* : 3.78%\n- *nice* : 0.00%\n- *sys*  : 3.12%\n- *idle* : 93.11%\n- *irq*  : 0.00%\n\n2. INTEL(R) XEON(R) PLATINUM 8581C CPU @ 2.30GHz (0 MHZ)\n- *user* : 4.26%\n- *nice* : 0.00%\n- *sys*  : 3.36%\n- *idle* : 92.38%\n- *irq*  : 0.00%",
+              "contextInfo": {
+                "stanzaId": "AC4FC64DB0A135825AA15816807C60CD",
+                "participant": "263713178283@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".ping"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "e8tzcmykzaX4W3jxwqU+GtcZdFE/b+1How15XJfRHSA="
+            }
+          },
+          "messageTimestamp": "1782466970",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0DD77244546380ADC55",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466970,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": false,
+                "id": "AC4FC64DB0A135825AA15816807C60CD",
+                "participant": "9458021363866@lid"
+              },
+              "text": "🌠",
+              "senderTimestampMs": "1782466970270"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0B0073F156A7559D4BB",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782466971,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "> *JAWAD-MD SPEED: 0.50ms 🚀*",
+              "contextInfo": {
+                "stanzaId": "AC4FC64DB0A135825AA15816807C60CD",
+                "participant": "263713178283@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".ping"
+                },
+                "mentionedJid": [
+                  "263713178283@s.whatsapp.net"
+                ],
+                "forwardingScore": 999,
+                "isForwarded": true,
+                "forwardedNewsletterMessageInfo": {
+                  "newsletterJid": "120363425151176864@newsletter",
+                  "serverMessageId": 143,
+                  "newsletterName": "JawadTechX"
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC5543221D72E61C225E9C4569550A2C",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467059,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": "Which server do you use",
+            "messageContextInfo": {
+              "messageSecret": "nDAQErLR62ldVhuqwVazDhZoeBTqAqRBHeDohd6515c="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC2F5DFF04D7F566C5DAE4A2E00FCB15",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467095,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "extendedTextMessage": {
+              "text": "@9458021363866",
+              "previewType": "NONE",
+              "contextInfo": {
+                "stanzaId": "AC5543221D72E61C225E9C4569550A2C",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": "Which server do you use"
+                },
+                "mentionedJid": [
+                  "9458021363866@lid"
+                ],
+                "quotedType": "EXPLICIT"
+              },
+              "inviteLinkGroupTypeV2": "DEFAULT"
+            },
+            "messageContextInfo": {
+              "messageSecret": "jcipPhDZjOWTS9GQfiKu7PyP7ok3DBSqtVQ8bLNSN0U="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACAA312A03C8D940F4BBEB286851762C",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467107,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".bot auto typing on",
+            "messageContextInfo": {
+              "messageSecret": "Yy+T0y8GCwgmJ394Ujx4RDDj17CqPnsUX+//AUyNNpI="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0B2A649279FEDF60E7D"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "*⚙️ SETTINGS BOT ⚙️*\n\t\t\t\t\t\nSelect Bot Settings:\n\n*👥 Mode Penggunaan:*\n- Mode Bot : *.bot mode [public/self/group/private]*\n- Whitelist Mode : *.bot whitelist [on/off]*\n\n*🎛️ Fitur Otomatis (on/off):*\n- Anti Call : *.bot anticall [on/off]*\n- Anti Spam : *.bot antispam [on/off]*\n- Auto Bio : *.bot autobio [on/off]*\n- Auto Read : *.bot autoread [on/off]*\n- Auto Typing : *.bot autotyping [on/off]*\n- Read Status/SW : *.bot readsw [on/off]*\n\n*🛠️ System Settings:*\n- Multi Prefix : *.bot multiprefix [on/off]*\n- Did You Mean : *.bot didyoumean [on/off]*\n- Log Console : *.bot log [on/off]*\n- Author Prefix : *.bot author [on/off]*\n\n*📊 Info & Status:*\n- Cek Semua Setting : *.bot set*\n- Cek Runtime Bot : *.bot*",
+              "contextInfo": {
+                "stanzaId": "ACAA312A03C8D940F4BBEB286851762C",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".bot auto typing on"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "iO/4QWg9KLzgQCfP1fND4PT0gc1c+6gHuFBMTg0JRZc="
+            }
+          },
+          "messageTimestamp": "1782467107",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC1CF8617D3824518274BA0145BD6383",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467120,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".bot autotyping on",
+            "messageContextInfo": {
+              "messageSecret": "7nwaYZgXA9KKZUHk4e8rU8/RhxfewFKuubYRZGA2Lds="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0818666A76D6400F1AD"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "*Sukses Change To On*",
+              "contextInfo": {
+                "stanzaId": "AC1CF8617D3824518274BA0145BD6383",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".bot autotyping on"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "WV3T6HYxnO7W8lGNNs6C/i1xJpxXPq4/dkOdnYFWBR0="
+            }
+          },
+          "messageTimestamp": "1782467121",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "ACFE6F96E752D19BD75DE4F3D45052D2",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467189,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "How are you",
+              "previewType": "NONE",
+              "contextInfo": {
+                "stanzaId": "AC2F5DFF04D7F566C5DAE4A2E00FCB15",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "extendedTextMessage": {
+                    "text": "@9458021363866",
+                    "previewType": "NONE",
+                    "contextInfo": {
+                      "mentionedJid": [
+                        "9458021363866@lid"
+                      ]
+                    },
+                    "inviteLinkGroupTypeV2": "DEFAULT"
+                  }
+                },
+                "quotedType": "EXPLICIT"
+              },
+              "inviteLinkGroupTypeV2": "DEFAULT"
+            },
+            "messageContextInfo": {
+              "messageSecret": "1uIYVFSKc8kyeRZ3h4L4OiyEfHK87Y/Btqbr1xBo7XU="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "ACAF79A1E27972AF8CCE2F31D231DACD",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467218,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "conversation": ".logo",
+            "messageContextInfo": {
+              "messageSecret": "5giSJ+E8APFsndNYzXwTB7/hnhmABsZkwZ6KAiLyt0Q="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC3408F45D3ACBF0C5384D3014FA0B50",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467331,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": "I'm fine , long time",
+            "messageContextInfo": {
+              "messageSecret": "iSwkTVDxNZiatX+lK+fx3Pf34LF4l7zIT+zPa8CkDNk="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC0C6D806F529A27160DE049FA074111",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467353,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ". allmenu",
+            "messageContextInfo": {
+              "messageSecret": "O0GTpgmLUE1xSSBKQmn/qQi7htHHz6pr5aJOBxjK2E8="
+            }
+          }
         }
       ],
       "keyId": {}
