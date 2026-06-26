@@ -1,12 +1,13 @@
 {
   "hit": {
-    "totalcmd": 9,
-    "todaycmd": 9,
+    "totalcmd": 14,
+    "todaycmd": 14,
     "bot": 3,
     "ping": 2,
     "allmenu": 2,
-    "info": 1,
-    "gc": 1
+    "info": 2,
+    "gc": 4,
+    "profile": 1
   },
   "set": {
     "254706519089@s.whatsapp.net": {
@@ -45,12 +46,12 @@
   "store": {},
   "users": {
     "254706519089@s.whatsapp.net": {
-      "vip": true,
+      "vip": false,
       "ban": false,
       "afkTime": -1,
       "afkReason": "",
       "register": false,
-      "limit": 999,
+      "limit": 20,
       "money": 10000000,
       "lastclaim": 1782466556364,
       "lastbegal": 1782466556364,
@@ -106,7 +107,7 @@
       "demote": false,
       "antitoxic": false,
       "promote": false,
-      "welcome": false,
+      "welcome": true,
       "antivirtex": false,
       "antitagsw": false,
       "antidelete": false,

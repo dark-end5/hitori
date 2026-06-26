@@ -28,6 +28,35 @@ function readStore() {
     }
 }
 
+function readMessages() {
+    try {
+        const raw = fs.readFileSync('./settings.js', 'utf-8');
+        const block = raw.match(/global\.mess\s*=\s*\{([^}]+)\}/s);
+        if (!block) return {};
+        const result = {};
+        const lines = block[1].split('\n');
+        for (const line of lines) {
+            const m = line.match(/^\s*(\w+)\s*:\s*["'](.*)["']\s*,?\s*$/);
+            if (m) result[m[1]] = m[2];
+        }
+        return result;
+    } catch {
+        return {};
+    }
+}
+
+function updateMessages(updates) {
+    let raw = fs.readFileSync('./settings.js', 'utf-8');
+    for (const [key, val] of Object.entries(updates)) {
+        const escaped = val.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+        raw = raw.replace(
+            new RegExp(`(${key}\\s*:\\s*)["'][^"']*["']`),
+            `$1'${escaped}'`
+        );
+    }
+    fs.writeFileSync('./settings.js', raw, 'utf-8');
+}
+
 function readSettings() {
     try {
         const raw = fs.readFileSync('./settings.js', 'utf-8');
@@ -140,6 +169,23 @@ app.post('/api/settings', (req, res) => {
 
         updateSettingsFile(changes);
         res.json({ success: true, settings: readSettings() });
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
+    }
+});
+
+app.get('/api/messages', (req, res) => {
+    res.json(readMessages());
+});
+
+app.post('/api/messages', (req, res) => {
+    try {
+        const updates = req.body;
+        if (typeof updates !== 'object' || Array.isArray(updates)) {
+            return res.status(400).json({ success: false, error: 'Invalid body' });
+        }
+        updateMessages(updates);
+        res.json({ success: true, messages: readMessages() });
     } catch (e) {
         res.status(500).json({ success: false, error: e.message });
     }

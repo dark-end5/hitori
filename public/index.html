@@ -256,6 +256,15 @@
     </div>
   </div>
 
+  <!-- Bot Messages Panel -->
+  <div class="settings-panel" id="messages-panel">
+    <h3>💬 Bot Messages</h3>
+    <div class="settings-grid" id="messages-grid">
+      <div class="empty">Loading messages...</div>
+    </div>
+    <button class="save-btn" id="save-msg-btn" onclick="saveMessages()">Save Messages</button>
+  </div>
+
   <!-- Bot Configuration Panel -->
   <div class="settings-panel">
     <h3>⚙️ Bot Configuration</h3>
@@ -315,6 +324,68 @@
 
 <script>
 let currentSettings = {};
+
+const MSG_LABELS = {
+  key:      'API Key Limit Message',
+  owner:    'Owner Only',
+  admin:    'Admin Only',
+  botAdmin: 'Bot Must Be Admin',
+  onWa:     'Not on WhatsApp',
+  group:    'Groups Only',
+  private:  'Private Chat Only',
+  quoted:   'Reply Required',
+  limit:    'Limit Reached',
+  prem:     'Premium Only',
+  text:     'Text Required',
+  media:    'Media Required',
+  wait:     'Processing / Wait',
+  fail:     'Failed Message',
+  error:    'Error Message',
+  done:     'Success / Done'
+};
+
+async function loadMessages() {
+  try {
+    const msgs = await fetch('/api/messages').then(r => r.json());
+    const grid = document.getElementById('messages-grid');
+    grid.innerHTML = Object.entries(msgs).map(([key, val]) => `
+      <div class="field">
+        <label>${MSG_LABELS[key] || key}</label>
+        <input type="text" id="msg-${key}" value="${val.replace(/"/g, '&quot;')}" />
+      </div>
+    `).join('');
+  } catch(e) {
+    document.getElementById('messages-grid').innerHTML = '<div class="empty">Failed to load messages</div>';
+  }
+}
+
+async function saveMessages() {
+  const btn = document.getElementById('save-msg-btn');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+  try {
+    const body = {};
+    for (const key of Object.keys(MSG_LABELS)) {
+      const el = document.getElementById('msg-' + key);
+      if (el) body[key] = el.value;
+    }
+    const res = await fetch('/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast('Bot messages saved successfully!');
+    } else {
+      showToast('Error: ' + data.error, true);
+    }
+  } catch(e) {
+    showToast('Failed to save: ' + e.message, true);
+  }
+  btn.disabled = false;
+  btn.textContent = 'Save Messages';
+}
 
 function showToast(msg, isError = false) {
   const t = document.getElementById('toast');
@@ -440,6 +511,7 @@ async function load() {
   btn.classList.remove('spinning');
 }
 
+loadMessages();
 loadSettings();
 load();
 setInterval(load, 15000);

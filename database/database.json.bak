@@ -1,12 +1,13 @@
 {
   "hit": {
-    "totalcmd": 9,
-    "todaycmd": 9,
+    "totalcmd": 14,
+    "todaycmd": 14,
     "bot": 3,
     "ping": 2,
     "allmenu": 2,
-    "info": 1,
-    "gc": 1
+    "info": 2,
+    "gc": 4,
+    "profile": 1
   },
   "set": {
     "254706519089@s.whatsapp.net": {
@@ -106,7 +107,7 @@
       "demote": false,
       "antitoxic": false,
       "promote": false,
-      "welcome": false,
+      "welcome": true,
       "antivirtex": false,
       "antitagsw": false,
       "antidelete": false,

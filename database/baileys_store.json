@@ -14,7 +14,7 @@
   "presences": {
     "120363423926876493@g.us": {
       "9458021363866@lid": {
-        "lastKnownPresence": "available"
+        "lastKnownPresence": "composing"
       }
     }
   },
@@ -947,6 +947,274 @@
             "conversation": ". allmenu",
             "messageContextInfo": {
               "messageSecret": "O0GTpgmLUE1xSSBKQmn/qQi7htHHz6pr5aJOBxjK2E8="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACE190A9412CA53BB0DB1D7473F4DB06",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467958,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".info",
+            "messageContextInfo": {
+              "messageSecret": "3e3tRkiiXHilWr+68kBV/zxFJcl4EKjC9HkwWPE63IQ="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC988338F1FF16147666233A557547E6",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467963,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc info",
+            "messageContextInfo": {
+              "messageSecret": "8zDuWDcOmC2Efz9mB50eTFdqpYETuLYj4oUUErHCyDg="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB07C603E09459B1071F7"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🔴\n- leave on/off 🔴\n- promote on/off 🔴\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "AC988338F1FF16147666233A557547E6",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc info"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "N798Vwu9MrUiLFlpBWH17mV0u8LhKvBpLDymFs6nv0I="
+            }
+          },
+          "messageTimestamp": "1782467963",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC64CDD7CE1A0866FF4EAFFD98A8B4E2",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467977,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc welcommsg on",
+            "messageContextInfo": {
+              "messageSecret": "SfHoRC/JnyJRW8yadaeCLrmzH5tEsUpYO4tcuDmBXhI="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB002521822DF3585F205"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🔴\n- leave on/off 🔴\n- promote on/off 🔴\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "AC64CDD7CE1A0866FF4EAFFD98A8B4E2",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc welcommsg on"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "SUOxiUIHL2NcvdwF20IwYkM6oFX/t6LiidWGmQM0S0A="
+            }
+          },
+          "messageTimestamp": "1782467977",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC0ED14F72075510395DBC973FD9BB54",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782467987,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc welcome on",
+            "messageContextInfo": {
+              "messageSecret": "dyWTGBOif06m1wDa6TNaNn45625EpufX3Mf6kjKj32w="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0AB6E37AF33C6F07146"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "*Sukses Change To On*",
+              "contextInfo": {
+                "stanzaId": "AC0ED14F72075510395DBC973FD9BB54",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc welcome on"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "t9hNe9JGKZzYxIbJjlH/SDXWrgjTPv0W3gO9UBteWH8="
+            }
+          },
+          "messageTimestamp": "1782467987",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACD4ED5A9A6D7481DA94982C2CA87314",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468043,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".profile",
+            "messageContextInfo": {
+              "messageSecret": "YNMWGvc3jsaXcGVORUbG+uwqKnvCUQRMvxn2QTJI93Y="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0A2E8BC436E8B03F985"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "*👤Profile @254706519089 :*\n🐋User Bot : True\n🔥User : VIP\n⏳Expired : -\n🎫Limit : 20\n💰Uang : 10.000.000",
+              "contextInfo": {
+                "stanzaId": "ACD4ED5A9A6D7481DA94982C2CA87314",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".profile"
+                },
+                "mentionedJid": [
+                  "254706519089@s.whatsapp.net"
+                ],
+                "nonJidMentions": 0
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "y2+tjgQBpB2GoI1yh48WVLl3RH3uZbOS9Frx1hbLQ6Q="
+            }
+          },
+          "messageTimestamp": "1782468043",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0FCABCEB4EEF6E218A9",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468044,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "ACD4ED5A9A6D7481DA94982C2CA87314",
+                "participant": "116119323078873@lid"
+              },
+              "text": "🚀",
+              "senderTimestampMs": "1782468044113"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB03E5AA22FBAB2919C80",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468044,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "ℹ️ *Usage:*\n• .getpp <phone number> (e.g., .getpp 923427582273)\n• Reply to someone's message\n• Mention someone (@user) in a group",
+              "contextInfo": {
+                "stanzaId": "ACD4ED5A9A6D7481DA94982C2CA87314",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".profile"
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACCD1CB7BC16A0C7272871F4DFD800E1",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468065,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".limit",
+            "messageContextInfo": {
+              "messageSecret": "WUUuK0irfHlKzPKvDGoQEoqT3uo1Cq0+qorCurc8efc="
             }
           }
         }
