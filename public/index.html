@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Bot Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0a0f0d; color: #e0e0e0; min-height: 100vh; }
+
+  header {
+    background: #111b14;
+    border-bottom: 1px solid #1f3024;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .logo { display: flex; align-items: center; gap: 10px; }
+  header .logo svg { width: 28px; height: 28px; }
+  header h1 { font-size: 1.2rem; font-weight: 700; color: #25d366; }
+  header .status-pill {
+    display: flex; align-items: center; gap: 6px;
+    background: #1a2e1e; border-radius: 20px;
+    padding: 5px 14px; font-size: 0.8rem; color: #25d366;
+  }
+  header .status-pill .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #25d366; animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
+
+  .bot-info {
+    background: linear-gradient(135deg, #111b14, #162b1b);
+    border: 1px solid #1f3024;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .bot-avatar {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; flex-shrink: 0;
+  }
+  .bot-details h2 { font-size: 1.4rem; color: #fff; }
+  .bot-details p { color: #6fcf97; font-size: 0.85rem; margin-top: 4px; }
+  .bot-meta { margin-left: auto; text-align: right; }
+  .bot-meta span { display: block; font-size: 0.78rem; color: #888; }
+  .bot-meta strong { color: #ccc; font-size: 0.9rem; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: #111b14;
+    border: 1px solid #1f3024;
+    border-radius: 14px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #25d366; }
+  .card .label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .card .value { font-size: 2rem; font-weight: 700; color: #25d366; }
+  .card .sub { font-size: 0.75rem; color: #555; margin-top: 4px; }
+  .card.accent { border-color: #128c7e; }
+  .card.accent .value { color: #4ecdc4; }
+  .card.warn .value { color: #f7b731; }
+  .card.danger .value { color: #fc5c65; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  @media(max-width:700px) { .grid2 { grid-template-columns: 1fr; } }
+
+  .panel {
+    background: #111b14;
+    border: 1px solid #1f3024;
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .panel h3 { font-size: 0.9rem; color: #aaa; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .toggle-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #1a2a1e;
+  }
+  .toggle-row:last-child { border-bottom: none; }
+  .toggle-row .name { font-size: 0.9rem; color: #ccc; }
+  .badge {
+    font-size: 0.72rem; font-weight: 600; padding: 3px 10px;
+    border-radius: 20px; text-transform: uppercase;
+  }
+  .badge.on { background: #1a3d22; color: #25d366; }
+  .badge.off { background: #2a1f1f; color: #888; }
+
+  .cmd-bar { margin-bottom: 10px; }
+  .cmd-bar .cmd-name {
+    display: flex; justify-content: space-between;
+    font-size: 0.82rem; color: #ccc; margin-bottom: 4px;
+  }
+  .bar-track { background: #1a2a1e; border-radius: 4px; height: 7px; overflow: hidden; }
+  .bar-fill { background: linear-gradient(90deg, #25d366, #128c7e); height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+
+  .users-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .users-table th { text-align: left; color: #666; font-weight: 500; padding: 8px 6px; border-bottom: 1px solid #1a2a1e; }
+  .users-table td { padding: 8px 6px; border-bottom: 1px solid #141f17; color: #ccc; }
+  .users-table tr:last-child td { border-bottom: none; }
+  .pill { padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .pill.vip { background: #2d1f4a; color: #b39ddb; }
+  .pill.free { background: #1a2a1e; color: #555; }
+  .pill.ban { background: #3d1f1f; color: #ef5350; }
+
+  .sys-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #1a2a1e; font-size: 0.85rem; }
+  .sys-row:last-child { border-bottom: none; }
+  .sys-row .key { color: #666; }
+  .sys-row .val { color: #ccc; font-weight: 500; }
+
+  .refresh-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    background: #25d366; color: #000; border: none;
+    border-radius: 50%; width: 48px; height: 48px;
+    font-size: 1.2rem; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s;
+  }
+  .refresh-btn:hover { transform: scale(1.1); }
+  .refresh-btn.spinning { animation: spin 1s linear infinite; }
+  @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+  .empty { color: #444; font-size: 0.85rem; padding: 16px 0; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.528 5.837L0 24l6.337-1.508A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.032-1.388l-.361-.214-3.741.98.998-3.651-.235-.374A9.769 9.769 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+    <h1 id="bot-title">WhatsApp Bot</h1>
+  </div>
+  <div class="status-pill"><div class="dot"></div><span>Live</span></div>
+</header>
+
+<div class="container">
+
+  <div class="bot-info">
+    <div class="bot-avatar">🤖</div>
+    <div class="bot-details">
+      <h2 id="botname">Loading...</h2>
+      <p id="botnumber">+— ——— ———</p>
+    </div>
+    <div class="bot-meta">
+      <span>Uptime</span>
+      <strong id="uptime">—</strong>
+      <span style="margin-top:8px">Owner</span>
+      <strong id="owner">—</strong>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="label">Total Commands</div>
+      <div class="value" id="totalcmd">—</div>
+      <div class="sub">All time</div>
+    </div>
+    <div class="card accent">
+      <div class="label">Today's Commands</div>
+      <div class="value" id="todaycmd">—</div>
+      <div class="sub">Since midnight</div>
+    </div>
+    <div class="card">
+      <div class="label">Users</div>
+      <div class="value" id="userCount">—</div>
+      <div class="sub" id="vipCount">— VIP</div>
+    </div>
+    <div class="card accent">
+      <div class="label">Groups</div>
+      <div class="value" id="groupCount">—</div>
+      <div class="sub">Active</div>
+    </div>
+    <div class="card warn">
+      <div class="label">Memory Used</div>
+      <div class="value" id="mem">—</div>
+      <div class="sub">MB (RSS)</div>
+    </div>
+    <div class="card danger">
+      <div class="label">Banned Users</div>
+      <div class="value" id="bannedCount">—</div>
+      <div class="sub">Blocked</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Bot Settings</h3>
+      <div id="settings-list"></div>
+    </div>
+
+    <div class="panel">
+      <h3>System Info</h3>
+      <div id="sys-info"></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Top Commands Used</h3>
+      <div id="cmd-chart"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Recent Users</h3>
+      <div style="overflow-x:auto">
+        <table class="users-table">
+          <thead><tr><th>Number</th><th>Limit</th><th>Status</th></tr></thead>
+          <tbody id="users-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<button class="refresh-btn" onclick="load()" title="Refresh">↻</button>
+
+<script>
+async function load() {
+  const btn = document.querySelector('.refresh-btn');
+  btn.classList.add('spinning');
+  try {
+    const [stats, users] = await Promise.all([
+      fetch('/api/stats').then(r => r.json()),
+      fetch('/api/users').then(r => r.json())
+    ]);
+
+    document.getElementById('bot-title').textContent = stats.botname;
+    document.getElementById('botname').textContent = stats.botname;
+    document.getElementById('botnumber').textContent = stats.number ? '+' + stats.number : 'Not set';
+    document.getElementById('owner').textContent = stats.owner ? '+' + stats.owner : '—';
+    document.getElementById('uptime').textContent = stats.uptime;
+    document.getElementById('totalcmd').textContent = stats.totalcmd.toLocaleString();
+    document.getElementById('todaycmd').textContent = stats.todaycmd.toLocaleString();
+    document.getElementById('userCount').textContent = stats.userCount.toLocaleString();
+    document.getElementById('vipCount').textContent = stats.vipCount + ' VIP';
+    document.getElementById('groupCount').textContent = stats.groupCount.toLocaleString();
+    document.getElementById('mem').textContent = stats.memUsed;
+    document.getElementById('bannedCount').textContent = stats.bannedCount;
+
+    const settingsMap = [
+      ['Public Mode', stats.public],
+      ['Message Logging', stats.log],
+      ['Auto Read', stats.autoread],
+      ['Anti Call', stats.anticall],
+      ['Auto Typing', stats.autotyping],
+    ];
+    document.getElementById('settings-list').innerHTML = settingsMap.map(([name, val]) => `
+      <div class="toggle-row">
+        <span class="name">${name}</span>
+        <span class="badge ${val ? 'on' : 'off'}">${val ? 'ON' : 'OFF'}</span>
+      </div>
+    `).join('');
+
+    document.getElementById('sys-info').innerHTML = [
+      ['Node.js', stats.nodeVersion],
+      ['Platform', stats.platform],
+      ['Memory (RSS)', stats.memUsed + ' MB'],
+      ['Uptime', stats.uptime],
+      ['Contacts', stats.contactCount.toLocaleString()],
+    ].map(([k, v]) => `
+      <div class="sys-row"><span class="key">${k}</span><span class="val">${v}</span></div>
+    `).join('');
+
+    const cmds = stats.cmdBreakdown || [];
+    const maxVal = cmds.length ? cmds[0][1] : 1;
+    document.getElementById('cmd-chart').innerHTML = cmds.length
+      ? cmds.map(([cmd, count]) => `
+        <div class="cmd-bar">
+          <div class="cmd-name"><span>.${cmd}</span><span>${count}</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.round(count/maxVal*100)}%"></div></div>
+        </div>
+      `).join('')
+      : '<div class="empty">No commands used yet</div>';
+
+    const tbody = document.getElementById('users-tbody');
+    const top = users.slice(0, 10);
+    tbody.innerHTML = top.length ? top.map(u => `
+      <tr>
+        <td>${u.number}</td>
+        <td>${u.limit}</td>
+        <td><span class="pill ${u.ban ? 'ban' : u.vip ? 'vip' : 'free'}">${u.ban ? 'Banned' : u.vip ? 'VIP' : 'Free'}</span></td>
+      </tr>
+    `).join('') : '<tr><td colspan="3" class="empty">No users yet</td></tr>';
+
+  } catch(e) {
+    console.error(e);
+  }
+  btn.classList.remove('spinning');
+}
+
+load();
+setInterval(load, 15000);
+</script>
+</body>
+</html>
