@@ -237,6 +237,36 @@ app.get('/api/users', (req, res) => {
     })));
 });
 
+// ── User Management ─────────────────────────────────────────────────────────
+app.get('/api/user/:number', (req, res) => {
+    const db = readDB();
+    const jid = req.params.number.replace(/\D/g, '') + '@s.whatsapp.net';
+    const user = db.users?.[jid];
+    if (!user) return res.status(404).json({ success: false, error: 'User not found' });
+    res.json({ success: true, jid, number: req.params.number.replace(/\D/g, ''), ...user });
+});
+
+app.post('/api/user/:number', (req, res) => {
+    try {
+        const dbPath = './database/database.json';
+        const db = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
+        const jid = req.params.number.replace(/\D/g, '') + '@s.whatsapp.net';
+        if (!db.users) db.users = {};
+        if (!db.users[jid]) {
+            db.users[jid] = { vip: false, ban: false, limit: 20, money: 10000000, afkTime: -1, afkReason: '', register: false };
+        }
+        const { vip, ban, limit, money } = req.body;
+        if (vip !== undefined)   db.users[jid].vip   = Boolean(vip);
+        if (ban !== undefined)   db.users[jid].ban   = Boolean(ban);
+        if (limit !== undefined) db.users[jid].limit = parseInt(limit);
+        if (money !== undefined) db.users[jid].money = parseInt(money);
+        fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+        res.json({ success: true, user: db.users[jid] });
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
+    }
+});
+
 // ── Groups ──────────────────────────────────────────────────────────────────
 app.get('/api/groups', (req, res) => {
     const db = readDB();

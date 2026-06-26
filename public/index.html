@@ -483,6 +483,73 @@ input:checked + .slider:before { transform:translateX(20px); }
     </div>
   </div>
 
+  <!-- ══ User Management ══ -->
+  <div class="settings-block" style="margin-bottom:24px">
+    <div class="settings-block-header">
+      <span class="icon">👥</span>
+      <h3>User Management</h3>
+    </div>
+
+    <div style="padding:20px 24px;border-bottom:1px solid #1f3024">
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="field" style="flex:1;gap:0">
+          <input id="um-search" type="text" placeholder="Search by phone number (e.g. 254706519089)"
+            style="border-radius:8px" onkeydown="if(event.key==='Enter')searchUser()"/>
+        </div>
+        <button class="save-btn" style="padding:10px 22px;margin:0" onclick="searchUser()">Search</button>
+      </div>
+    </div>
+
+    <div id="um-result" style="display:none;padding:20px 24px;border-bottom:1px solid #1f3024">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <div style="font-size:2.4rem">👤</div>
+        <div style="flex:1;min-width:160px">
+          <div style="color:#fff;font-weight:700;font-size:1rem" id="um-number-display">—</div>
+          <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap" id="um-badges"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:280px">
+          <div class="field">
+            <label>Daily Limit</label>
+            <input id="um-limit" type="number" style="border-radius:8px"/>
+          </div>
+          <div class="field">
+            <label>Money / Balance</label>
+            <input id="um-money" type="number" style="border-radius:8px"/>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+        <button class="save-btn" style="padding:9px 20px;margin:0;background:#25d366" onclick="umSave()">💾 Save Changes</button>
+        <button id="um-vip-btn" style="padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer" onclick="umToggle('vip')">⭐ Grant VIP</button>
+        <button id="um-ban-btn" style="padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer" onclick="umToggle('ban')">🚫 Ban User</button>
+        <button style="padding:9px 20px;border-radius:8px;border:1px solid #1f3024;background:none;color:#888;font-size:0.85rem;cursor:pointer;font-weight:600" onclick="umReset()">↺ Reset Limit</button>
+      </div>
+    </div>
+
+    <div id="um-notfound" style="display:none;padding:20px 24px">
+      <div class="empty">No user found with that number. If they've never messaged the bot, they won't appear yet.</div>
+    </div>
+
+    <!-- All Users Table -->
+    <div style="padding:16px 24px 20px">
+      <div style="font-size:0.75rem;color:#666;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px">All Users</div>
+      <div style="overflow-x:auto">
+        <table class="users-table" id="um-all-table">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Limit</th>
+              <th>Balance</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="um-all-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <!-- Stats Panels -->
   <div class="grid2">
     <div class="panel">
@@ -724,6 +791,161 @@ async function loadStats() {
 
   } catch(e) { console.error(e); }
   btn.classList.remove('spinning');
+}
+
+// ── User Management ───────────────────────────────────────────────────────
+let umCurrentNumber = null;
+let umCurrentUser = null;
+
+function umBadges(u) {
+  const badges = [];
+  if (u.vip)  badges.push(`<span class="pill vip">VIP</span>`);
+  if (u.ban)  badges.push(`<span class="pill ban">Banned</span>`);
+  if (!u.vip && !u.ban) badges.push(`<span class="pill free">Free</span>`);
+  return badges.join(' ');
+}
+
+function umUpdateButtons(u) {
+  const vipBtn = document.getElementById('um-vip-btn');
+  const banBtn = document.getElementById('um-ban-btn');
+  if (u.vip) {
+    vipBtn.textContent = '⭐ Revoke VIP';
+    vipBtn.style.cssText = 'padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer;background:#2d1f4a;color:#b39ddb';
+  } else {
+    vipBtn.textContent = '⭐ Grant VIP';
+    vipBtn.style.cssText = 'padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer;background:#1a3d22;color:#25d366';
+  }
+  if (u.ban) {
+    banBtn.textContent = '✅ Unban User';
+    banBtn.style.cssText = 'padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer;background:#1a2a1e;color:#aaa';
+  } else {
+    banBtn.textContent = '🚫 Ban User';
+    banBtn.style.cssText = 'padding:9px 20px;border-radius:8px;border:none;font-weight:700;font-size:0.85rem;cursor:pointer;background:#3d1f1f;color:#ef5350';
+  }
+}
+
+function umShowUser(number, u) {
+  umCurrentNumber = number;
+  umCurrentUser = { ...u };
+  document.getElementById('um-result').style.display = 'block';
+  document.getElementById('um-notfound').style.display = 'none';
+  document.getElementById('um-number-display').textContent = '+' + number;
+  document.getElementById('um-badges').innerHTML = umBadges(u);
+  document.getElementById('um-limit').value = u.limit ?? 20;
+  document.getElementById('um-money').value = u.money ?? 10000000;
+  umUpdateButtons(u);
+}
+
+async function searchUser() {
+  const raw = document.getElementById('um-search').value.trim().replace(/\D/g,'');
+  if (!raw) return;
+  try {
+    const r = await fetch('/api/user/' + raw);
+    if (r.ok) {
+      const u = await r.json();
+      umShowUser(raw, u);
+    } else {
+      document.getElementById('um-result').style.display = 'none';
+      document.getElementById('um-notfound').style.display = 'block';
+    }
+  } catch(e) { showToast('Search failed: ' + e.message, true); }
+}
+
+async function umSave() {
+  if (!umCurrentNumber) return;
+  const limit = parseInt(document.getElementById('um-limit').value);
+  const money = parseInt(document.getElementById('um-money').value);
+  try {
+    const r = await fetch('/api/user/' + umCurrentNumber, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ limit, money, vip: umCurrentUser.vip, ban: umCurrentUser.ban })
+    });
+    const d = await r.json();
+    if (d.success) {
+      umCurrentUser = { ...umCurrentUser, limit, money };
+      showToast('User updated successfully!');
+      loadAllUsers();
+    } else showToast('Error: ' + d.error, true);
+  } catch(e) { showToast('Failed: ' + e.message, true); }
+}
+
+async function umToggle(field) {
+  if (!umCurrentNumber) return;
+  umCurrentUser[field] = !umCurrentUser[field];
+  try {
+    const r = await fetch('/api/user/' + umCurrentNumber, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ [field]: umCurrentUser[field] })
+    });
+    const d = await r.json();
+    if (d.success) {
+      document.getElementById('um-badges').innerHTML = umBadges(umCurrentUser);
+      umUpdateButtons(umCurrentUser);
+      const label = field === 'vip'
+        ? (umCurrentUser.vip ? 'VIP granted!' : 'VIP revoked.')
+        : (umCurrentUser.ban ? 'User banned.' : 'User unbanned!');
+      showToast(label);
+      loadAllUsers();
+    } else { umCurrentUser[field] = !umCurrentUser[field]; showToast('Error: ' + d.error, true); }
+  } catch(e) { umCurrentUser[field] = !umCurrentUser[field]; showToast('Failed: ' + e.message, true); }
+}
+
+async function umReset() {
+  if (!umCurrentNumber) return;
+  document.getElementById('um-limit').value = 20;
+  document.getElementById('um-money').value = 10000000;
+}
+
+async function umQuickAction(number, field, value) {
+  try {
+    const r = await fetch('/api/user/' + number, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ [field]: value })
+    });
+    const d = await r.json();
+    if (d.success) {
+      showToast('Updated +' + number);
+      loadAllUsers();
+      if (umCurrentNumber === number) {
+        umCurrentUser[field] = value;
+        umUpdateButtons(umCurrentUser);
+        document.getElementById('um-badges').innerHTML = umBadges(umCurrentUser);
+      }
+    } else showToast('Error: ' + d.error, true);
+  } catch(e) { showToast('Failed: ' + e.message, true); }
+}
+
+async function loadAllUsers() {
+  try {
+    const users = await fetch('/api/users').then(r => r.json());
+    const tbody = document.getElementById('um-all-tbody');
+    if (!users.length) {
+      tbody.innerHTML = '<tr><td colspan="5" class="empty">No users yet</td></tr>';
+      return;
+    }
+    tbody.innerHTML = users.map(u => `
+      <tr>
+        <td style="font-weight:600;color:#ccc">
+          <span style="cursor:pointer;color:#25d366" onclick="document.getElementById('um-search').value='${u.number}';searchUser()">+${u.number}</span>
+        </td>
+        <td>${u.limit ?? 0}</td>
+        <td>${(u.money||0).toLocaleString()}</td>
+        <td><span class="pill ${u.ban?'ban':u.vip?'vip':'free'}">${u.ban?'Banned':u.vip?'VIP':'Free'}</span></td>
+        <td>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button onclick="umQuickAction('${u.number}','vip',${!u.vip})"
+              style="padding:3px 10px;border-radius:6px;border:none;cursor:pointer;font-size:0.72rem;font-weight:600;background:${u.vip?'#2d1f4a':'#1a3d22'};color:${u.vip?'#b39ddb':'#25d366'}">
+              ${u.vip?'Revoke VIP':'Grant VIP'}
+            </button>
+            <button onclick="umQuickAction('${u.number}','ban',${!u.ban})"
+              style="padding:3px 10px;border-radius:6px;border:none;cursor:pointer;font-size:0.72rem;font-weight:600;background:${u.ban?'#1a2a1e':'#3d1f1f'};color:${u.ban?'#aaa':'#ef5350'}">
+              ${u.ban?'Unban':'Ban'}
+            </button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+  } catch(e) { console.error(e); }
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────
