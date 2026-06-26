@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WhatsApp Bot Dashboard</title>
+<title>Lesta Bot Dashboard</title>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#25d366"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Lesta Bot"/>
+<link rel="apple-touch-icon" href="/icon-192.png"/>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Segoe UI',sans-serif; background:#0a0f0d; color:#e0e0e0; min-height:100vh; }
@@ -190,6 +197,31 @@ input:checked + .slider:before { transform:translateX(20px); }
 @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 
 .empty { color:#444; font-size:0.85rem; padding:16px 0; text-align:center; }
+
+/* ── Install Banner ── */
+.install-banner {
+  display:none; align-items:center; gap:14px;
+  background:linear-gradient(135deg,#1a3d22,#162b1b);
+  border:1px solid #25d366; border-radius:14px;
+  padding:16px 20px; margin-bottom:20px;
+}
+.install-banner.visible { display:flex; }
+.install-banner .ib-icon { font-size:2rem; flex-shrink:0; }
+.install-banner .ib-text { flex:1; }
+.install-banner .ib-text strong { display:block; color:#fff; font-size:0.95rem; margin-bottom:3px; }
+.install-banner .ib-text span { font-size:0.78rem; color:#6fcf97; }
+.install-btn {
+  background:#25d366; color:#000; border:none; border-radius:8px;
+  padding:9px 20px; font-size:0.85rem; font-weight:700;
+  cursor:pointer; white-space:nowrap; flex-shrink:0;
+  transition:background 0.2s;
+}
+.install-btn:hover { background:#1ebe59; }
+.ib-dismiss {
+  background:none; border:none; color:#555; font-size:1.2rem;
+  cursor:pointer; flex-shrink:0; padding:4px;
+}
+.ib-dismiss:hover { color:#aaa; }
 </style>
 </head>
 <body>
@@ -203,6 +235,17 @@ input:checked + .slider:before { transform:translateX(20px); }
 </header>
 
 <div class="container">
+
+  <!-- Install Banner -->
+  <div class="install-banner" id="install-banner">
+    <div class="ib-icon">📲</div>
+    <div class="ib-text">
+      <strong>Install Lesta Bot Dashboard</strong>
+      <span>Add to your home screen for quick access — works like a native app</span>
+    </div>
+    <button class="install-btn" id="install-btn">Install App</button>
+    <button class="ib-dismiss" onclick="dismissInstall()" title="Dismiss">✕</button>
+  </div>
 
   <!-- Bot Info Bar -->
   <div class="bot-info">
@@ -688,6 +731,42 @@ loadSettings();
 loadMessages();
 loadStats();
 setInterval(loadStats, 15000);
+
+// ── PWA Install ───────────────────────────────────────────────────────────
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (!sessionStorage.getItem('install-dismissed')) {
+    document.getElementById('install-banner').classList.add('visible');
+  }
+});
+
+document.getElementById('install-btn').addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  document.getElementById('install-banner').classList.remove('visible');
+  if (outcome === 'accepted') showToast('App installed! Open it from your home screen.');
+});
+
+window.addEventListener('appinstalled', () => {
+  document.getElementById('install-banner').classList.remove('visible');
+  showToast('Lesta Bot Dashboard installed successfully!');
+});
+
+function dismissInstall() {
+  sessionStorage.setItem('install-dismissed', '1');
+  document.getElementById('install-banner').classList.remove('visible');
+}
+
+// ── Service Worker ────────────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .catch(e => console.warn('SW registration failed:', e));
+}
 </script>
 </body>
 </html>

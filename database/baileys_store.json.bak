@@ -2045,6 +2045,704 @@
               "messageSecret": "wwanySUL7sPpGLAg3DTkm6NKs/N8wRr42GZooVpV3Y0="
             }
           }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACC6431715F3EDB6067BC75196D0CC4E",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468792,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc link",
+            "messageContextInfo": {
+              "messageSecret": "uKW2kWe2GPzd1/WgfzOUT7aqm5hqwA86kMldMh73WH8="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0065833AB80944B5E99"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🟢\n- leave on/off 🔴\n- promote on/off 🔴\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "ACC6431715F3EDB6067BC75196D0CC4E",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc link"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "Q5rjC69XYYyWtoj9XbOL4tFjabqf1JOtkV9kdEyDb6c="
+            }
+          },
+          "messageTimestamp": "1782468792",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC14E92EC89EE91AFD065267E1EA632F",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468803,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc join",
+            "messageContextInfo": {
+              "messageSecret": "NdTJ4xJt796/4U5RSh+ng8uKtiLiZqRolgI5iIwSd7E="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0F342C9E6F7F516D996"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "List Request Join :\n*Nothing*\nExample : .gc join acc/reject",
+              "contextInfo": {
+                "stanzaId": "AC14E92EC89EE91AFD065267E1EA632F",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc join"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "/IPhWEPE5TT2TLTkCVy9JnYSXFpHHy91+fj+YKKYGYo="
+            }
+          },
+          "messageTimestamp": "1782468804",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC8B24F734BC3FC09A0F7AF3EC096321",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468817,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc info",
+            "messageContextInfo": {
+              "messageSecret": "1QReACm+cjoQucyYi+sXP9lEJbqcReGIlxTsiwL78gU="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB01DABB34B8266047CDD"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🟢\n- leave on/off 🔴\n- promote on/off 🔴\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "AC8B24F734BC3FC09A0F7AF3EC096321",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc info"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "HC0+JVXR3gQG2d24QB7m+Xv8z61GTuuGiI22W0/HPl4="
+            }
+          },
+          "messageTimestamp": "1782468817",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC04304CC9672B73E9066B3EB69A843F",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468826,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "extendedTextMessage": {
+              "text": ".gc promote",
+              "previewType": "NONE",
+              "inviteLinkGroupTypeV2": "DEFAULT"
+            },
+            "messageContextInfo": {
+              "messageSecret": "RF2jzQvNEQQ+w0hkyxsNx2javwnPTNfastRTsWq5Ypw="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB062F1BAFAAF40DEC6A9"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "❗Promote on/off",
+              "contextInfo": {
+                "stanzaId": "AC04304CC9672B73E9066B3EB69A843F",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "extendedTextMessage": {
+                    "text": ".gc promote",
+                    "previewType": "NONE",
+                    "inviteLinkGroupTypeV2": "DEFAULT"
+                  }
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "NeYbq+y7Fp8evwNNKKFmuGtoZHzcyFqO/3F+HciluCw="
+            }
+          },
+          "messageTimestamp": "1782468826",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACF5B2BE45BDD1579EFA7C41038D5D75",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468836,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc promote on",
+            "messageContextInfo": {
+              "messageSecret": "H8/bs+OE8fzQc07vTjRmGCwNaBGfAjYPRQB2hhL+sP4="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB0FD01324C61EAAD96A2"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "*Sukses Change To On*",
+              "contextInfo": {
+                "stanzaId": "ACF5B2BE45BDD1579EFA7C41038D5D75",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc promote on"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "+TvQyxo9QRqeLk7OyklcKGVQkRBbC3EQjAAXpRKW/cU="
+            }
+          },
+          "messageTimestamp": "1782468837",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC7CAC072EABACB5B5574487DEA9300F",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468845,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "extendedTextMessage": {
+              "text": ".promote on",
+              "previewType": "NONE",
+              "contextInfo": {
+                "stanzaId": "ACA6BBD96C9E094A99072208CA56053F",
+                "participant": "263713178283@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": "Okay okay"
+                },
+                "quotedType": "EXPLICIT"
+              },
+              "inviteLinkGroupTypeV2": "DEFAULT"
+            },
+            "messageContextInfo": {
+              "messageSecret": "ZhgDEr2d6GYAiu73XvAcLUXGhJrSEY6mWT3ldtaP6Ro="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "966321016",
+            "participant": "116119323078873@lid"
+          },
+          "messageTimestamp": "1782468846",
+          "participant": "116119323078873@lid",
+          "messageStubType": "GROUP_PARTICIPANT_PROMOTE",
+          "messageStubParameters": [
+            "{\"id\":\"12602088382487@lid\",\"phoneNumber\":\"923175746978@s.whatsapp.net\",\"admin\":null}"
+          ]
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0E3161CF78BE23052FB",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468846,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "AC7CAC072EABACB5B5574487DEA9300F",
+                "participant": "116119323078873@lid"
+              },
+              "text": "💀",
+              "senderTimestampMs": "1782468846216"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB07BEEFA5A97F51E127A",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468846,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "❌ I must be admin to promote someone.",
+              "contextInfo": {
+                "stanzaId": "AC7CAC072EABACB5B5574487DEA9300F",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "extendedTextMessage": {
+                    "text": ".promote on",
+                    "previewType": "NONE",
+                    "inviteLinkGroupTypeV2": "DEFAULT"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACD528622B011ABA6F7A4F4829EDDD25",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468866,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".gc invite",
+            "messageContextInfo": {
+              "messageSecret": "76Z0818mbLwWso2UGdinu8T7U95yZ0Kn8XODfTrTg/g="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "3EB019A4556B2825602C34"
+          },
+          "message": {
+            "extendedTextMessage": {
+              "text": "Settings Group Lesta\n- open\n- close\n- join acc/reject\n- disappearing 90/7/1/off\n- antilink on/off 🔴\n- antivirtex on/off 🔴\n- antidelete on/off 🔴\n- welcome on/off 🟢\n- leave on/off 🔴\n- promote on/off 🟢\n- demote on/off 🔴\n- setinfo on/off 🔴\n- nsfw on/off 🔴\n- waktusholat on/off 🔴\n- antihidetag on/off 🔴\n- antitoxic on/off 🔴\n- antitagsw on/off 🔴\n\n- setwelcome _textnya_\n- setleave _textnya_\n- setpromote _textnya_\n- setdemote _textnya_\n\nExample:\n.gc antilink off",
+              "contextInfo": {
+                "stanzaId": "ACD528622B011ABA6F7A4F4829EDDD25",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".gc invite"
+                }
+              }
+            },
+            "messageContextInfo": {
+              "messageSecret": "PbDB/p9yDWqY0iso/U1G3nbur4VIX2UG5XdkKtp9Wiw="
+            }
+          },
+          "messageTimestamp": "1782468866",
+          "status": "PENDING",
+          "participant": "254706519089:6@s.whatsapp.net"
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC737622685AD37A761A36422658571B",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468871,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".invite",
+            "messageContextInfo": {
+              "messageSecret": "IkIw/+sc8H15OuNCrz6tlKB/wPdDPTjHN8OkicaNxwg="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0E6F1B3CFA0FFC9F49A",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468872,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "AC737622685AD37A761A36422658571B",
+                "participant": "116119323078873@lid"
+              },
+              "text": "📨",
+              "senderTimestampMs": "1782468871860"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB072AB81A844522973E8",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468872,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "❌ I need admin.",
+              "contextInfo": {
+                "stanzaId": "AC737622685AD37A761A36422658571B",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".invite"
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC28AC48A1DA6A2384884E88E5BE649F",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468875,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".link",
+            "messageContextInfo": {
+              "messageSecret": "gkYlKuE0WLWaqXkAOQMP8zm+0i82OmG+qwBRrz3PTbg="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB026F5E3CE1CA0A5B354",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468876,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "AC28AC48A1DA6A2384884E88E5BE649F",
+                "participant": "116119323078873@lid"
+              },
+              "text": "🔗",
+              "senderTimestampMs": "1782468875930"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0DD5DF552C86012EE1A",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468876,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "❌ I must be admin to get the invite link.",
+              "contextInfo": {
+                "stanzaId": "AC28AC48A1DA6A2384884E88E5BE649F",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".link"
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "ACF94C1F0A74317A0E9D9B852D746A16",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468885,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "conversation": "Aaaah okay",
+            "messageContextInfo": {
+              "messageSecret": "h9VuYTOLcpIn0t9qEbyA4GVM5KYOfmKbw9AAySLcXHA="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "ACDD118A42E4EE3D5EDEF139E3FC955B",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468899,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "extendedTextMessage": {
+              "text": ".promote @9458021363866",
+              "previewType": "NONE",
+              "contextInfo": {
+                "mentionedJid": [
+                  "9458021363866@lid"
+                ]
+              },
+              "inviteLinkGroupTypeV2": "DEFAULT"
+            },
+            "messageContextInfo": {
+              "messageSecret": "n4oJ3bdKeGOwp9UXhoDftDGUJtYCUMDiRWYLT/LEeF4="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3975530370",
+            "participant": "116119323078873@lid"
+          },
+          "messageTimestamp": "1782468900",
+          "participant": "116119323078873@lid",
+          "messageStubType": "GROUP_PARTICIPANT_PROMOTE",
+          "messageStubParameters": [
+            "{\"id\":\"9458021363866@lid\",\"phoneNumber\":\"263713178283@s.whatsapp.net\",\"admin\":null}"
+          ]
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB07ABF35D7B613380236",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468900,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "ACDD118A42E4EE3D5EDEF139E3FC955B",
+                "participant": "116119323078873@lid"
+              },
+              "text": "💀",
+              "senderTimestampMs": "1782468899947"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0C51B1D216C36B0775E",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468900,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "❌ I must be admin to promote someone.",
+              "contextInfo": {
+                "stanzaId": "ACDD118A42E4EE3D5EDEF139E3FC955B",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "extendedTextMessage": {
+                    "text": ".promote @9458021363866",
+                    "previewType": "NONE",
+                    "inviteLinkGroupTypeV2": "DEFAULT"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": true,
+            "id": "AC2976D04DB6FA0AEAE26841B96E6979",
+            "participant": "116119323078873@lid",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468911,
+          "pushName": "Eliud",
+          "broadcast": false,
+          "status": 2,
+          "message": {
+            "conversation": ".invite",
+            "messageContextInfo": {
+              "messageSecret": "8giawpHNUalcyuBLz0+9/JN5Y6l71TVkr/EKgTEdhrQ="
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB00AB093B7D8195E7E9B",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468912,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "reactionMessage": {
+              "key": {
+                "remoteJid": "120363423926876493@g.us",
+                "fromMe": true,
+                "id": "AC2976D04DB6FA0AEAE26841B96E6979",
+                "participant": "116119323078873@lid"
+              },
+              "text": "📨",
+              "senderTimestampMs": "1782468911829"
+            }
+          }
+        },
+        {
+          "key": {
+            "remoteJid": "120363423926876493@g.us",
+            "fromMe": false,
+            "id": "3EB0709BF06D12D1A95394",
+            "participant": "9458021363866@lid",
+            "participantAlt": "263713178283@s.whatsapp.net",
+            "addressingMode": "lid"
+          },
+          "messageTimestamp": 1782468912,
+          "pushName": "🅜🅡 🅝🅞🅣🅝🅘🅒🅔🥷🥷🥷",
+          "broadcast": false,
+          "message": {
+            "extendedTextMessage": {
+              "text": "🔗 Group Link:\nhttps://chat.whatsapp.com/FKUVALBoEEA20mqllm2fYu",
+              "matchedText": "https://chat.whatsapp.com/FKUVALBoEEA20mqllm2fYu",
+              "description": "WhatsApp Group Invite",
+              "title": "Lesta",
+              "previewType": "NONE",
+              "jpegThumbnail": "/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCADAAMADASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAUDBAIBBv/EADQQAAICAgAEBAMFCQEBAAAAAAABAgMEEQUSITETQVFhFCJxFSMygcEGQlJikZKh0eFDsf/EABkBAQEBAQEBAAAAAAAAAAAAAAACAQQDBf/EACkRAQACAQQBAgYCAwAAAAAAAAABAhEDEiExBBRBEyIyUYGhI5FhYrH/2gAMAwEAAhEDEQA/AP3YAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGOXkQxaJWz667L1foGTMVjMvdt1dEOe2ahH1ZPs45jxeoQnP37GGNiW8Sn8Tlyarf4YrzXt6Iq1Y1NK1XVCK9kTmZ6csW1dXmvyx+3BXxyiT1OuyHv0ZQpvqyIc9U1Ne3kLcem6OrKoSXuiTl4NmBL4rDk+Vfij30v1Q5gm2tpc2+aP2tA58LKjl46sj0faUfRnQU6a2i0ZgAAUAAAAAAAAAAAAAAAAAAAR+J7yuJUYm/lXWX5/8RYJD+X9o1zecen9pNnN5PNYr7TMN+L2yx8FKr5eZqG15Iy4FfOdVlUuZqD2m+vfyO/Lx45WPOqXTfZ+jJXDsr4C2eJlLkW9qXo/9GTxbLy1M0162mfl6Ww0mtNbTMMjLox4xlbNJTfTXXZrXZC2CnXJSi/NPZbs3VmcZ5SMBfB8Xtxl+Ca6L/KLJHs+b9o4cv7qW/wC1lgmrn8biLV9omQAFOoAAAAAAAAAAAAAAAAAAAkcbi6baMuDSlF6/p1RXIfHbk8qqt9YwXM19f+Im/Tl8yYjSnK1XLnrjPWuZJ6fkYZmFVmQ1YtSXaS7onPiedNc9OLquPV/K30NquOUSX3tc4S9uqG6J7Z6jRvG237clvBcmMkoShOPk29aKGLTDheFOV003vmlr19EZW8cx4r7uE5y9+iMI0ZfFLIzyd1ULtHt/RfqTxHTwrGlS38PNv1DThFc78i7NsX4m1H9f9Fc81wjVXGEIqMYrSSPRcRiHbo6fw6YAAa9QAAAAAAAAAAAAAAAAAADPwKvEdnhx533k11NAGTET2GVmNRa92Uwk/VxRqATET2yrxqKnuumuL9VFGoAIiI6AAGgAAAAAAAAAAAAAYZ0rI4dsqZcs4x2n9Dc+NKSafZ9GE2jMTDi4VlSyMSU7pblCTTft3OLA4lddnqFlm65tpLS6ehz0WvDhm0N6euVfXev/AIz5Kp4uNhZKXVybf9dr/B5bp4fL+PfFefp7/vChxPLvhmU4+PPlckt9E+7GLlXT4tdTOzdcObSaXTRjj6yuPTsXWNe2vy6Iyrx1k8ZvrlKSg3Jy09bXobmc5XOpebbonu2FyFtdm+ScZa78r2fZzhWtzlGK9W9EOyiODxiiNLajJro36vTRrmV4qz5TzMnnXlUk+nouhW57+oticxGYnHfCvCyE03CcZJej2cH2jL7U+G+78L+Lz7bJ1DqXFoLGjOFU3y6l02mup9+Dp+2fheV+F6b/AJdk7pl5W8i9ojb98L8rIQipSnGKfm3oQshYtwnGS/leyFn1eDnxd9U540UlFJ9Na9TXBWHLOjZi3Sqb/wDKS/F+ZW7nD1jyZm+3Hvjvl3cUyni4jlB6sk+WL9Dm4RnW32WVXy5pJc0drX1Ofitsb+I10zmo116Um+y33/weMjIpp4tDIonGUHpy5fLyZMzzl4315jV3Z4icY/6vuUYtJySb9WefFr5+TxIc/wDDzLZH42nLMx1F6bXR/mes/hdNGHK2py54dW2+5W6XvbXvm0Vr9P8AlYcoxaTkk36s8+LXz8niQ5/4eZbPz2VbPJhhSb+8aceb35tbOvP4XTRhytqcvEh1bb7mbvsn1NrZmteIWQcvDL5X4Nc5vcluLfro6i45ddLRasWj3AAFAAAAACFxTAvszZTpqlKM0nteTO/iOK7OHeFVHmlXy8qXnrodwJ2xy5o8akbv9kzguJZjwtndBwlJpJP0POJjXQ4xfbKuSrlzal5PqiqBtbHj1iKxHsl52PdZxXHthXKUI8u5LsuphGrJw+I22rGlfGbemvdlsDay3jRM7onnOUVU5dnFasm2hxjtdnvlXuesujKq4p8VRT4q8tfTRYA2s9NGMZnvP5S7J8QqvjcoStqnFN1L9166owjj35OfHI+FdEIak15y1+rLYG1s+PEzzacdo2Dw6V111udS/me0m+7f0NOIcKq+GbxadWJrom+q/MqgbYxgjxdPZtmPz7vzmb4z+DjbFwtUeXr9ejOrKs4jk1/DPF5W380l2Z25mBHKvrtdjj4fklvfXZ2GbXlXxrZtEzMROPy/PcRx3jPEpjL5lHv7tnRlWcRya3jPF5W3qUl2Z25mAsu6ux2OPJ5Jb312dg29lfGndaM4icf0wwsf4XFhVvbS6v3NwC3bWsViIgAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z",
+              "contextInfo": {
+                "stanzaId": "AC2976D04DB6FA0AEAE26841B96E6979",
+                "participant": "254706519089@s.whatsapp.net",
+                "quotedMessage": {
+                  "conversation": ".invite"
+                }
+              }
+            }
+          }
         }
       ],
       "keyId": {}
@@ -2074,12 +2772,12 @@
         {
           "id": "12602088382487@lid",
           "phoneNumber": "923175746978@s.whatsapp.net",
-          "admin": null
+          "admin": "admin"
         },
         {
           "id": "9458021363866@lid",
           "phoneNumber": "263713178283@s.whatsapp.net",
-          "admin": null
+          "admin": "admin"
         },
         {
           "id": "92011822616632@lid",

@@ -29,8 +29,8 @@ global.pairing_code = true
 global.number_bot = '254706519089' // Enter the bot number here if using a panel. Format: '628xx'
 
 global.fake = {
-        anonim: 'https://telegra.ph/file/95670d63378f7f4210f03.png',
-        thumbnailUrl: 'https://telegra.ph/file/fe4843a1261fc414542c4.jpg',
+        anonim: "https://telegra.ph/file/95670d63378f7f4210f03.png",
+        thumbnailUrl: "https://telegra.ph/file/fe4843a1261fc414542c4.jpg",
         thumbnail: fs.readFileSync('./src/media/naze.png'),
         docs: fs.readFileSync('./src/media/fake.pdf'),
         listfakedocs: ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','application/vnd.openxmlformats-officedocument.presentationml.presentation','application/vnd.openxmlformats-officedocument.wordprocessingml.document']
@@ -39,20 +39,20 @@ global.fake = {
 global.my = {
         yt: "https://youtube.com/c/Nazedev",
         gh: "https://github.com/dark-end5",
-        gc: "https://chat.whatsapp.com/EqMTCcxdCZgHUJNl5KooCr",
-        ch: "120363250409960161@newsletter"
+        gc: "https://chat.whatsapp.com/FKUVALBoEEA20mqllm2fYu",
+        ch: ""
 }
 
 global.limit = {
-        free: 20,
-        premium: 9999999,
-        vip: 9099999990
+        free: 20000,
+        premium: 999999999999,
+        vip: 9099999990999
 }
 
 global.money = {
-        free: 10000000,
-        premium: 10000000000,
-        vip: 100000000000
+        free: 10000,
+        premium: 10000000000000,
+        vip: 100000000000000
 }
 
 global.mess = {
@@ -92,8 +92,8 @@ global.jadwalSholat = {
         Isya: '19:00'
 }
 
-global.badWords = [""] // add more toxic words here. e.g: ['word1','word2']
-global.chatLength = 1000
+global.badWords = [] // add more toxic words here. e.g: ['word1','word2']
+global.chatLength = 100000
 
 // Template message types
 global.templateTypes = {
