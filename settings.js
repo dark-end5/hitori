@@ -14,9 +14,9 @@ const __filename = fileURLToPath(import.meta.url);
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
 global.owner = ["254706519089"] // ['628','628'] for 2 or more owners
-global.author = 'BaileysBot'
+global.author = 'Lesta'
 global.botname = 'Lesta Bot'
-global.packname = 'Bot WhatsApp'
+global.packname = 'Lesta'
 global.timezone = 'Africa/Nairobi' // East Africa Time (EAT)
 global.locale = 'en' // Change with .setlocale command
 global.listprefix = ["+","!","."]
@@ -44,34 +44,34 @@ global.my = {
 }
 
 global.limit = {
-        free: 20000,
-        premium: 999999999999,
-        vip: 9099999990999
+        free: 999999999,
+        premium: 999999999,
+        vip: 999999999
 }
 
 global.money = {
-        free: 10000,
+        free: 10000000000,
         premium: 10000000000000,
         vip: 100000000000000
 }
 
 global.mess = {
-        key: "API key limit reached! Please upgrade: https://naze.biz.id",
-        owner: "*Owner Only* !",
-        admin: "*Admin Only* !",
-        botAdmin: "Bot Must be Admin!",
-        onWa: "That number is not registered on WhatsApp!",
-        group: "For Groups Only!",
-        private: "For Private Chat Only!",
-        quoted: "Please reply to a message!",
-        limit: "Limit used up!",
-        prem: "Premium Only!",
-        text: "Please enter the text!",
-        media: "Please send the media!",
-        wait: "*Processing* 🔄🔄▪️▪️▪️...",
-        fail: "Failed to load❌!",
-        error: "Error❗❗🔕!",
-        done: "*Done* 👍 ✅"
+	key: "API key limit reached! Please upgrade: https://naze.biz.id",
+	owner: "Owner only!",
+	admin: "Admin only!",
+	botAdmin: "Bot must be an admin!",
+	onWa: "Number is not registered on WhatsApp!",
+	group: "Group chat only!",
+	private: "Private chat only!",
+	quoted: "Please reply to a message!",
+	limit: "Limit exhausted!",
+	prem: "Premium only!",
+	text: "Please enter the text!",
+	media: "Please send the media!",
+	wait: "Processing...",
+	fail: "Failed!",
+	error: "Error!",
+	done: "Done!"
 }
 
 global.APIs = {
@@ -92,7 +92,7 @@ global.jadwalSholat = {
         Isya: '19:00'
 }
 
-global.badWords = [] // add more toxic words here. e.g: ['word1','word2']
+global.badWords = ["sex","pussy","nude"] // add more toxic words here. e.g: ['word1','word2']
 global.chatLength = 100000
 
 // Template message types
